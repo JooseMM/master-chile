@@ -18,4 +18,14 @@
 .dm-sans-font {
   font-family: 'DM_Sans';
 }
+.gradient-shadow {
+  z-index: 0;
+  position: absolute;
+  top: 6rem;
+  left: 2rem;
+  box-shadow: 0px 0px 200px 60px rgba(255,255,255,0.6);
+}
+.btn-shadow {
+  box-shadow: -10px 10px 70px 0px rgba(255,255,255,0.1);
 
+}
