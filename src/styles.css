@@ -23,12 +23,17 @@ body {
 }
 .master-container:after {
   content: '';
-  height: 100%;
-  width: 30%;
+  z-index: -1;
   position: absolute;
-  background-color: white;
-  top: -50px;
-}
+  right: -3.3rem;
+  top: -8.5px;
+  width: 0;
+  height: 0;
+  border-left: 45px solid transparent;
+  border-right: 45px solid transparent;
+  border-bottom: 49px solid #C42021;
+  transform: rotate(0.867turn);
+ }
 .barbell-bg {
   background-image: url('./assets/barbell.svg');
   background-repeat: no-repeat;
