@@ -23,6 +23,11 @@ const routes: Routes = [
     path: 'contacto',
     component: ContactoComponent,
   },
+    {
+    path: '',
+    redirectTo: '/inicio', pathMatch: 'full'
+  },
+
 
 ];
 

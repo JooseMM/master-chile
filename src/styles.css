@@ -11,10 +11,29 @@
   src: url('assets/fonts/DM_Sans/DMSans-VariableFont_opsz,wght.ttf') format('truetype');
 }
 
+body {
+  font-family : 'DM_Sans'
+}
+
 .archivo-font {
   font-family: 'Archivo';
 }
-
+.master-container {
+  position: relative;
+}
+.master-container:after {
+  content: '';
+  height: 100%;
+  width: 30%;
+  position: absolute;
+  background-color: white;
+  top: -50px;
+}
+.barbell-bg {
+  background-image: url('./assets/barbell.svg');
+  background-repeat: no-repeat;
+  background-position: 75% 50%;
+}
 .dm-sans-font {
   font-family: 'DM_Sans';
 }
