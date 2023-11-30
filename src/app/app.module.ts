@@ -4,10 +4,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { InicioComponent } from './components/pages/inicio/inicio.component';
-import { SucursalesComponent } from './components/pages/sucursales/sucursales.component';
+import { SucursalesComponent } from './components/sucursales/sucursales.component';
 import { NosotrosComponent } from './components/pages/nosotros/nosotros.component';
 import { ContactoComponent } from './components/pages/contacto/contacto.component';
 import { FooterComponent } from './components/footer/footer.component';
+import {FormsModule} from "@angular/forms"
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FooterComponent } from './components/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
