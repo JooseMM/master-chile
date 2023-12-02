@@ -31,30 +31,37 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 # sucursales
 
 Club de Halterofilia Machali
-Región de O'Higgins
+Región de O'Higgins 
+Zona Central
 Machalí
 Contacto: +56 9 7951 9158
 
 Asociacion Lp Raise
 Region metropolitana
+Zona Central
 Santiago
 Contacto: +56956811893
 
 Asociación deportiva regional Focus
 Región metropolitana
 Santiago
+Zona Central
 Contacto: +56974349388
 
 Club deportovo social de pesas
 Region de los lagos
 puerto montt
+Zona Sur
 halteromontt@gmail.com
 
 Club de levantamiento de pesas
 goten de melipilla
+Zona Central
 Contacto: 983902890
 
 Asociación de pesas Vicuña 
+Region de Coquimbo
+Zona Norte
 Contacto +56963226436
 
 Club Fortius Asociación
