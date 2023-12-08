@@ -1,0 +1,54 @@
+{
+  "braches" : {
+    "zonaCentral" : {
+        {
+          "id": "Club de Halterofilia Machali",
+          "region": "O'higgins",
+          "tlf": "9 7651 9158",
+          "email": null,
+        },
+        {
+          "id": "Lp Raise",
+          "region": "Metropolitana",
+          "tlf": "9 5681 1893",
+          "email": null,
+        },
+        {
+          "id": "Asociacion Deportiva Regional Focus",
+          "region": "Metropolitana",
+          "tlf": "9 7434 9388",
+          "email": null,
+        },
+        {
+          "id": "Goten de Melipilla",
+          "region": "Metropolitana",
+          "tlf": "9 8390 2890",
+          "email": null,
+        },
+        {
+          "id": "Club Fortius Asociacion",
+          "region": "Valparaiso",
+          "tlf": null,
+          "email": null,
+        }
+    },
+    "ZonaNorte": {
+        {
+            "id": "Asociacion Vicuña",
+            "region": "Coquimbo",
+            "tlf": "9 6322 6436",
+            "email": null,
+        },
+    },
+    "ZonaSur": {
+        {
+            "id": "Club Deportivo Social de Pesas",
+            "region": "Los Lagos",
+            "tlf": null,
+            "email": "Halteromontt@gmail.com"
+
+        }
+    }
+
+  }
+}
