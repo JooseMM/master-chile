@@ -3,8 +3,8 @@
   <select class="py-3.5 px-4 w-80 text-strong-black font-medium rounded-md" [(ngModel)]="selected"
     (ngModelChange)="onValueChange($event)">
     <option value="" disabled selected>Selecciona tu zona</option>
-    <option *ngFor="let branch of branchesData | keyvalue" [value]="branch.key">{{ branch.key | convertToReadable}}
+    <option *ngFor="let branch of branches | keyvalue" [value]="branch.key">{{ branch.key | convertToReadable}}
     </option>
   </select>
-  <h4>{{selected}}</h4>
+  <app-your-branches></app-your-branches>
 </section>

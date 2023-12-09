@@ -11,6 +11,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import {FormsModule} from "@angular/forms"
 import {HttpClientModule} from "@angular/common/http";
 import { ConvertToReadablePipe } from './convert-to-readable.pipe';
+import { YourBranchesComponent } from './components/your-branches/your-branches.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ConvertToReadablePipe } from './convert-to-readable.pipe';
     NosotrosComponent,
     ContactoComponent,
     FooterComponent,
-    ConvertToReadablePipe
+    ConvertToReadablePipe,
+    YourBranchesComponent
   ],
   imports: [
     BrowserModule,

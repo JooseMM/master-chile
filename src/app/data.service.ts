@@ -1,24 +1,34 @@
-import { Injectable, OnInit} from '@angular/core';
+import { Injectable, OnDestroy } from '@angular/core';
 import { HttpClient  } from '@angular/common/http';
-import { Subject } from 'rxjs';
+import { BehaviorSubject, Observable, map, tap  } from 'rxjs';
+import { Branches } from "./branches"
 
 @Injectable({
   providedIn: 'root'
 })
-export class DataService implements OnInit {
+export class DataService implements OnDestroy {
+  private branchesData:any;
+  private selectedBr = new BehaviorSubject([]);
 
-    branchesData: any;
-  constructor(private http: HttpClient){
-  }
-  ngOnInit(): void {
-    this.http.get('../../../assets/branches/braches.json').subscribe((res:any)=>{
-      this.branchesData = res.branches;
-    })
-  }
-  private BranchesIn = new Subject<any>();
-  showbranchesIn = this.BranchesIn.asObservable();
+    constructor(private http: HttpClient ){
+      }
 
-  updateBranchesIn(newData: string) {
-    this.BranchesIn.next(newData);
+  getData() :Observable<any> {
+    return this.branchesData = this.http.
+    get<Object>('../assets/branches/braches.json');
+  }
+    updateSelection(newSelection: string) {
+    this.getData()
+      .pipe(map(data => data.branches[newSelection]))
+      .subscribe((value)=> this.selectedBr.next(value))
+  }
+    getSelectedBranches() {
+    return this.selectedBr
+               .asObservable();
+  }
+  ngOnDestroy() {
+    this.branchesData.unsubscribe();
   }
 }
+
+

@@ -1,5 +1,6 @@
-import { Component, OnInit, OnChanges } from '@angular/core';
+import { Component, OnInit, OnChanges, OnDestroy } from '@angular/core';
 import {DataService} from "../../data.service"
+import {Subscription, tap} from "rxjs"
 
 @Component({
   selector: 'app-sucursales',
@@ -7,20 +8,26 @@ import {DataService} from "../../data.service"
   styles: [
   ]
 })
-export class SucursalesComponent implements OnInit{
-  ngOnInit(): void{
+export class SucursalesComponent implements OnInit, OnDestroy{
+  branches: any;
+  dataSubcription: Subscription;
+  selected: string = ''
 
+  ngOnInit(): void{}
+  constructor(private service: DataService) {
+    this.dataSubcription = service.getData()
+        .subscribe((res)=> this.branches = res.branches);
   }
-  constructor(private dataService: DataService) {
 
+  onValueChange(newSelection: any) {
+    this.service.updateSelection(newSelection);
   }
-branchesData: any = undefined;
-selected: string = ''
-  onValueChange(updateSelection: string) {
-    if(updateSelection) {
-      this.selected = updateSelection;
-      console.log(this.selected);
-    }
+
+  ngOnDestroy():void {
+   this.dataSubcription.unsubscribe();
   }
+
+
 }
+
 

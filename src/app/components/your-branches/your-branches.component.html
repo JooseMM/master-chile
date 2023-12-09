@@ -1,0 +1,6 @@
+<!-- <p *ngIf="showBranches">{{showBranches}}</p> -->
+<ul class="my-8 grid grid-cols-2 space-y-4 gap-4">
+  <li *ngFor="let branch of showBranches">
+    <div class="p-8">{{branch.region}}</div>
+  </li>
+</ul>
