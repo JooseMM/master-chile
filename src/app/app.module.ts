@@ -9,6 +9,8 @@ import { NosotrosComponent } from './components/pages/nosotros/nosotros.componen
 import { ContactoComponent } from './components/pages/contacto/contacto.component';
 import { FooterComponent } from './components/footer/footer.component';
 import {FormsModule} from "@angular/forms"
+import {HttpClientModule} from "@angular/common/http";
+import { ConvertToReadablePipe } from './convert-to-readable.pipe';
 
 @NgModule({
   declarations: [
@@ -18,12 +20,14 @@ import {FormsModule} from "@angular/forms"
     SucursalesComponent,
     NosotrosComponent,
     ContactoComponent,
-    FooterComponent
+    FooterComponent,
+    ConvertToReadablePipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

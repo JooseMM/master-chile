@@ -1,11 +1,10 @@
 <section class="bg-strong-black text-dimmed-white py-10 flex flex-col justify-center items-center">
   <h3 class="archivo-font font-bold mb-10 text-4xl">sucursales</h3>
-  <select class="py-3.5 px-4 w-80 text-strong-black font-medium rounded-md" [(ngmodel)]="zonas">
-    <option value="zona sur">zona sur</option>
-    <option value="zona norte">zona norte</option>
-    <option value="zona central">zona central</option>
+  <select class="py-3.5 px-4 w-80 text-strong-black font-medium rounded-md" [(ngModel)]="selected"
+    (ngModelChange)="onValueChange($event)">
+    <option value="" disabled selected>Selecciona tu zona</option>
+    <option *ngFor="let branch of branchesData | keyvalue" [value]="branch.key">{{ branch.key | convertToReadable}}
+    </option>
   </select>
-  <div>
-    <button>santiago</button>
-  </div>
+  <h4>{{selected}}</h4>
 </section>
