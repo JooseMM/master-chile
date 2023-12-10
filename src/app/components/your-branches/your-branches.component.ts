@@ -1,6 +1,7 @@
-import { Component, OnDestroy} from '@angular/core';
+import { Component, OnDestroy, OnInit} from '@angular/core';
+import {IBranches } from '../../branches'
 import {DataService} from '../../data.service'
-import {Subscription} from "rxjs"
+import {Subscription, tap} from "rxjs"
 
 
 @Component({
@@ -9,15 +10,25 @@ import {Subscription} from "rxjs"
   styles: [
   ]
 })
-export class YourBranchesComponent implements OnDestroy {
-  showBranches: any;
+
+export class YourBranchesComponent implements OnDestroy, OnInit {
+  showBranches: Array<IBranches>;
   dataSubcription: Subscription;
 
-constructor(private service: DataService) {
-  this.dataSubcription = service.getSelectedBranches()
-      .subscribe((data)=> this.showBranches = data)
+
+  ngOnInit() {
+    this.dataSubcription = this.service.getSelectedBranches()
+        .subscribe((data: Array<IBranches>)=> this.showBranches = data);
+  }
+  constructor(private service: DataService) {
+    this.showBranches = []
+    this.dataSubcription = new Subscription();
+  }
+  toggleDetail(id: number ) {
+    this.service.toggleDetails(id);
   }
   ngOnDestroy():void {
    this.dataSubcription.unsubscribe();
   }
 }
+

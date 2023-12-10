@@ -10,13 +10,15 @@ import {Subscription, tap} from "rxjs"
 })
 export class SucursalesComponent implements OnInit, OnDestroy{
   branches: any;
-  dataSubcription: Subscription;
+  dataSubcription: any;
   selected: string = ''
 
-  ngOnInit(): void{}
+  ngOnInit(): void{
+        this.dataSubcription = this.service.getData()
+        .subscribe((res)=> this.branches = res);
+  }
   constructor(private service: DataService) {
-    this.dataSubcription = service.getData()
-        .subscribe((res)=> this.branches = res.branches);
+    this.dataSubcription = undefined;
   }
 
   onValueChange(newSelection: any) {

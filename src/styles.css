@@ -67,5 +67,9 @@ body {
 }
 .btn-shadow {
   box-shadow: -10px 10px 70px 0px rgba(255,255,255,0.1);
-
+}
+.branch-bg-1 {
+  background-image: url('./assets/branch-bg-3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }

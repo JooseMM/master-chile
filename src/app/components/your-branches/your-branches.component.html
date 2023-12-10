@@ -1,6 +1,9 @@
 <!-- <p *ngIf="showBranches">{{showBranches}}</p> -->
-<ul class="my-8 grid grid-cols-2 space-y-4 gap-4">
-  <li *ngFor="let branch of showBranches">
-    <div class="p-8">{{branch.region}}</div>
+<ul class="my-8 grid grid-cols-2  gap-9">
+  <li *ngFor="let branch of showBranches; let id = index" #id>
+    <button class="px-10 py-6 branch-bg-1 flex justify-center items-center" (click)="toggleDetail(id)">
+      <p *ngIf="!branch.showDetails ; else elseDiv">{{branch.id}}</p>
+      <ng-template #elseDiv></ng-template>
+    </button>
   </li>
 </ul>
