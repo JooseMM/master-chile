@@ -1,9 +1,27 @@
 <!-- <p *ngIf="showBranches">{{showBranches}}</p> -->
-<ul class="my-8 grid grid-cols-2  gap-9">
+<ul class="my-20 grid grid-cols-2  gap-20 ">
   <li *ngFor="let branch of showBranches; let id = index" #id>
-    <button class="px-10 py-6 branch-bg-1 flex justify-center items-center" (click)="toggleDetail(id)">
-      <p *ngIf="!branch.showDetails ; else elseDiv">{{branch.id}}</p>
-      <ng-template #elseDiv></ng-template>
-    </button>
+    <div
+      class="relative z-10 rounded-md w-96 h-40 flex cursor-pointer flex-col justify-center items-center border-solid border-2 border-dimmed-white"
+      [ngClass]="id % 2 === 0 ? 'branch-bg-1':'branch-bg-2'" (click)="toggleDetail(id)">
+      <h4 *ngIf="!branch.showDetails ; else elseDiv" class="archivo-font text-2xl font-black tracking-widest uppercase">
+        {{branch.region}}
+      </h4>
+      <h3 *ngIf="!branch.showDetails" class="text-dimmed-white/80">{{branch.comuna}}</h3>
+      <ng-template #elseDiv>
+        <div class="dark-bg-effect flex flex-col justify-center pl-10 items-start">
+          <h5 class="archivo-font m-0 font-medium text-xl leading-5 text-dimmed-white">{{branch.id}}</h5>
+          <span class="text-dimmed-white/75 my-1 ">{{branch.ciudad}}</span>
+          <span
+            class="contact-container mt-1 bg-bright-red pl-2 py-0.5 pr-1 rounded flex whitespace-nowrap items-center">
+            <img [src]="branch.tlf ? '../../../assets/call.svg' : ''">
+            <a [class]="branch.tlf ? 'text-2xl pr-1 ml-2 w-full font-medium' : 'text-xl mx-2 my-0.5 w-full font-medium'"
+              [href]="branch.tlf ? 'telf:' + branch.tlf : 'mailto:' + branch.email">{{branch.tlf ? branch.tlf :
+              branch.email}}</a>
+          </span>
+        </div>
+      </ng-template>
+    </div>
   </li>
 </ul>
+<!--  w-2/3-->

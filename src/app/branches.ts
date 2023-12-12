@@ -1,8 +1,10 @@
 export interface IBranches {
   id:string,
   region: string,
-  tlf: string,
-  email: string,
+  ciudad: string,
+  comuna: string,
+  tlf?: string,
+  email?: string,
   showDetails: boolean
 }
 export interface IZones {

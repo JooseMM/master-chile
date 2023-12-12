@@ -21,15 +21,19 @@ export class DataService implements OnDestroy {
       zonaSur: []
     });
     this.exam =  ([{
-      id:     'Club de Ejemplo',
-      region: 'Region de Venecolandia',
+      id:     'Club de Papita Mani y Toston',
+      region: 'Venecolandia',
+      ciudad: 'El Tigre',
+      comuna: 'Santiago Centro',
       tlf:    '9 5555 93284',
       email:  '',
-      showDetails: false
+      showDetails: true
     },
     {
       id:     'Club de Maduro',
-      region: 'Region de Venecolandia',
+      region: 'Maracucha',
+      ciudad: 'El Tigre',
+      comuna: 'Santiago Centro',
       tlf:    '',
       email:  'pepito@gmail.com',
       showDetails: false

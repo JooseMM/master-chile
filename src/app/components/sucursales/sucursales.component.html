@@ -1,7 +1,7 @@
-<section class="bg-strong-black text-dimmed-white py-10 flex flex-col justify-center items-center">
-  <h3 class="archivo-font font-bold mb-10 text-4xl">sucursales</h3>
-  <select class="py-3.5 px-4 w-80 text-strong-black font-medium rounded-md" [(ngModel)]="selected"
-    (ngModelChange)="onValueChange($event)">
+<section class="bg-strong-black text-dimmed-white pb-16 pt-24 flex flex-col justify-center items-center">
+  <h3 class="archivo-font font-bold mb-14 text-5xl">Sucursales</h3>
+  <select class="py-3.5 px-4 w-80 text-strong-black font-medium rounded-md text-xl"
+    [class.text-opacity-60]="selected === ''" [(ngModel)]="selected" (ngModelChange)="onValueChange($event)">
     <option value="" disabled selected>Selecciona tu zona</option>
     <option *ngFor="let branch of branches | keyvalue" [value]="branch.key">{{ branch.key | convertToReadable}}
     </option>
