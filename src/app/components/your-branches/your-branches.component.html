@@ -1,8 +1,8 @@
 <!-- <p *ngIf="showBranches">{{showBranches}}</p> -->
-<ul class="my-20 grid grid-cols-2  gap-20 ">
+<ul class="my-20 grid grid-cols-1 lg:grid-cols-2 gap-20 ">
   <li *ngFor="let branch of showBranches; let id = index" #id>
     <div
-      class="relative z-10 rounded-md w-96 h-40 flex cursor-pointer flex-col justify-center items-center border-solid border-2 border-dimmed-white"
+      class="relative z-10 rounded-md | lg:w-96 h-40 flex cursor-pointer flex-col justify-center items-center border-solid border-2 border-dimmed-white"
       [ngClass]="id % 2 === 0 ? 'branch-bg-1':'branch-bg-2'" (click)="toggleDetail(id)">
       <h4 *ngIf="!branch.showDetails ; else elseDiv" class="archivo-font text-2xl font-black tracking-widest uppercase">
         {{branch.region}}

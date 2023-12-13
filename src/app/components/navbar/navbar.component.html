@@ -1,7 +1,9 @@
 <nav
-  class="flex justify-between items-center bg-dimmed-white text-lighter-black py-6 px-desktop-padding shadow-2xl shadow-black">
-  <span class="archivo-font font-black text-lg ">MASTER CHILE</span>
-  <ul class="dm-sans-font text-lighter-black/60 text-sm flex space-x-16">
+  class="relative flex justify-between items-center bg-dimmed-white text-lighter-black py-6 px-desktop-padding shadow-2xl shadow-black">
+  <a href="/" class="text-base archivo-font font-black  |  lg:text-lg ">MASTER CHILE</a>
+  <ul class="
+    py-12 px-16 flex flex-col rounded-md shadow-black shadow-2xl text-center space-y-10 dm-sans-font text-lighter-black/60 text-sm absolute z-20 -bottom-44 right-[10%] translate-y-1/2 bg-dimmed-white |
+    lg:static lg:shadow-none lg:translate-y-0 lg:space-x-16 lg:flex" [ngClass]="showMobileMenu ? 'flex' : 'hidden'">
     <li>
       <a class="lg:hover:text-lighter-black/100" routerLink="/inicio"
         routerLinkActive="text-lighter-black/100">INICIO</a>
@@ -18,10 +20,12 @@
       <a class="lg:hover:text-lighter-black/100" routerLink="/contacto"
         routerLinkActive="text-lighter-black/100">CONTACTO</a>
     </li>
-
   </ul>
-  <div class="flex space-x-3">
+  <div class="hidden | lg:flex space-x-3">
     <img src="../../../assets/chile-flag.svg" alt="bandera de Chile" />
     <span class="text-sm flex items-center">CL</span>
   </div>
+  <button (click)="toggleMobileMenu()"><img
+      [src]="showMobileMenu ? '../../../assets/close-mobile-menu.svg' : '../../../assets/mobile-menu.svg'"
+      [class]="showMobileMenu ? 'w-6 lg:hidden' : 'w-9 lg:hidden'" alt="Toggle navigation links"></button>
 </nav>
