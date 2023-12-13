@@ -12,6 +12,11 @@ import {FormsModule} from "@angular/forms"
 import {HttpClientModule} from "@angular/common/http";
 import { ConvertToReadablePipe } from './convert-to-readable.pipe';
 import { YourBranchesComponent } from './components/your-branches/your-branches.component';
+import { HeroComponent } from './components/pages/inicio/hero/hero.component';
+import { AboutComponent } from './components/pages/inicio/about/about.component';
+import { BranchesComponent } from './components/pages/inicio/branches/branches.component';
+import { CtaComponent } from './components/pages/inicio/cta/cta.component';
+import { DividerComponent } from './components/pages/inicio/divider/divider.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +28,12 @@ import { YourBranchesComponent } from './components/your-branches/your-branches.
     ContactoComponent,
     FooterComponent,
     ConvertToReadablePipe,
-    YourBranchesComponent
+    YourBranchesComponent,
+    HeroComponent,
+    AboutComponent,
+    BranchesComponent,
+    CtaComponent,
+    DividerComponent
   ],
   imports: [
     BrowserModule,

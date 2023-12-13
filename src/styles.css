@@ -55,22 +55,6 @@ body {
   background-repeat: no-repeat;
   background-position: 75% 50%;
 }
-.cta-bg {
-  background-image: url("./assets/oldman.svg");
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: contain;
-}
-.cta-bg:after {
-  content: '';
-  background-image: url('./assets/vectors-cta.svg');
-  background-repeat: no-repeat;
-  width: 200px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 10vw;
-}
 .dm-sans-font {
   font-family: 'DM_Sans';
 }
@@ -108,3 +92,26 @@ body {
   inset: 0;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 }
+.cta-bg {
+  background-image: url("./assets/oldman.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+}
+.cta-bg:after {
+  content: '';
+  background-image: url('./assets/vectors-cta.svg');
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 10vw;
+}
+
+@media only screen and (max-width: 800px;){
+
+ h2 br {
+  display: none;
+}
+ }

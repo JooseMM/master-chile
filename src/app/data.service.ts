@@ -27,7 +27,7 @@ export class DataService implements OnDestroy {
       comuna: 'Santiago Centro',
       tlf:    '9 5555 93284',
       email:  '',
-      showDetails: true
+      showDetails: false
     },
     {
       id:     'Club de Maduro',
