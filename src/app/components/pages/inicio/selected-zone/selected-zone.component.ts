@@ -1,18 +1,16 @@
 import { Component, OnDestroy, OnInit} from '@angular/core';
-import {IBranches } from '../../branches'
-import {DataService} from '../../data.service'
+import {IBranches } from '../../../../branches'
+import {DataService} from '../../../../data.service'
 import {Subscription, tap} from "rxjs"
 
-
 @Component({
-  selector: 'app-your-branches',
-  templateUrl:'./your-branches.component.html',
+  selector: 'app-selected-zone',
+  templateUrl: './selected-zone.component.html',
   styles: [
   ]
 })
-
-export class YourBranchesComponent implements OnDestroy, OnInit {
-  showBranches: Array<IBranches>;
+export class SelectedZoneComponent {
+showBranches: Array<IBranches>;
   dataSubcription: Subscription;
   showDetails: string;
   show = true;
@@ -33,4 +31,3 @@ export class YourBranchesComponent implements OnDestroy, OnInit {
    this.dataSubcription.unsubscribe();
   }
 }
-
