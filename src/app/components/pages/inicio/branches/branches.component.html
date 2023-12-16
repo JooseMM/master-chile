@@ -1,4 +1,5 @@
-<section class="bg-strong-black text-dimmed-white pb-16 pt-24 flex flex-col justify-center items-center">
+<section class="bg-strong-black text-dimmed-white pt-24 flex flex-col justify-center items-center | lg:pb-24"
+  [ngClass]="selected != '' ? 'pb-16' : 'pb-28' ">
   <h3 class="archivo-font font-bold mb-14 text-5xl">Sucursales</h3>
   <select class="py-3.5 px-4 w-80 text-strong-black font-medium rounded-md text-xl"
     [class.text-opacity-60]="selected === ''" [(ngModel)]="selected" (ngModelChange)="onValueChange($event)">

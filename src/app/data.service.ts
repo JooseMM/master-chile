@@ -12,7 +12,6 @@ export class DataService implements OnDestroy {
   private branchesData: BehaviorSubject<IZones>;
   private selectedBranch: BehaviorSubject<IBranches[]>;
   private subscription : Subscription;
-  exam: IBranches[];
 
   constructor(private http: HttpClient ){
     this.branchesData = new BehaviorSubject<IZones>({
@@ -20,26 +19,7 @@ export class DataService implements OnDestroy {
       zonaNorte: [],
       zonaSur: []
     });
-    this.exam =  ([{
-      id:     'Club de Papita Mani y Toston',
-      region: 'Venecolandia',
-      ciudad: 'El Tigre',
-      comuna: 'Santiago Centro',
-      tlf:    '9 5555 93284',
-      email:  '',
-      showDetails: false
-    },
-    {
-      id:     'Club de Maduro',
-      region: 'Maracucha',
-      ciudad: 'El Tigre',
-      comuna: 'Santiago Centro',
-      tlf:    '',
-      email:  'pepito@gmail.com',
-      showDetails: false
-    }
-    ])
-    this.selectedBranch = new BehaviorSubject<IBranches[]>(this.exam);
+    this.selectedBranch = new BehaviorSubject<IBranches[]>([]);
     this.subscription = this.http.get<{ branches: IZones}>('../assets/branches/braches.json')
       .subscribe((val: { branches: IZones} )=> this.branchesData.next(val.branches))
   }

@@ -110,6 +110,9 @@ body {
 }
 
 @media only screen and (max-width: 650px){
+  .cta-bg {
+   background-position: bottom -10vw right 0vw;
+  }
   .master-container:after {
     right: -48px;
   }
