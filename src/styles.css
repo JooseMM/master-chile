@@ -109,9 +109,19 @@ body {
   left: 10vw;
 }
 
-@media only screen and (max-width: 800px;){
+@media only screen and (max-width: 650px){
+  .master-container:after {
+    right: -48px;
+  }
+  .barbell-bg {
+    background-size: 140vw;
+    background-position: right -45vw bottom -30vw ;
+  }
 
- h2 br {
-  display: none;
-}
  }
+/*.barbell-bg {
+  background-image: url('./assets/barbell.svg');
+  background-repeat: no-repeat;
+  background-position: 75% 50%;
+}*/
+

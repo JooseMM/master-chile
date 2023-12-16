@@ -8,6 +8,9 @@ module.exports = {
       padding: {
         'desktop-padding': '10vw',
       },
+      margin: {
+        'desktop-margin': '10vw',
+      },
       colors: {
         'strong-black': '#171515',
         'lighter-black': '#332E2E',
