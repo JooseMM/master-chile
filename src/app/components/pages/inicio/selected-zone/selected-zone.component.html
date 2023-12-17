@@ -2,7 +2,7 @@
   <ul class="px-10 grid grid-cols-1 gap-y-16 pb-32 | lg:justify-items-center lg:w-[1000px] lg:m-auto lg:grid-cols-2  ">
     <li *ngFor="let branch of showBranches; let id = index" #id>
       <div
-        class="relative z-10 rounded-md h-40 flex cursor-pointer flex-col justify-center items-center border-solid border-2 border-dimmed-white | lg:w-96"
+        class="relative z-10 rounded-md h-40 flex cursor-pointer flex-col justify-center items-center border-solid border-2 border-dimmed-white | md:mx-auto md:w-[400px] | lg:mx-0 lg:w-96"
         [ngClass]="id % 2 === 0 ? 'branch-bg-1':'branch-bg-2'" (click)="toggleDetail(id)">
         <h4 *ngIf="!branch.showDetails ; else elseDiv"
           class="text-dimmed-white archivo-font text-xl font-black tracking-widest uppercase | lg:text-2xl">

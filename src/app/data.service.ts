@@ -19,7 +19,26 @@ export class DataService implements OnDestroy {
       zonaNorte: [],
       zonaSur: []
     });
-    this.selectedBranch = new BehaviorSubject<IBranches[]>([]);
+    this.selectedBranch = new BehaviorSubject<IBranches[]>([
+      {
+        id: "Rancho Alto",
+        region: "Venecolandia",
+        ciudad: "Zulia",
+        comuna: "No se",
+        tlf:  "9 2323 4444",
+        email: undefined,
+        showDetails: false,
+      },
+      {
+        id: "Rancho Alto",
+        region: "Venecolandia",
+        ciudad: "Zulia",
+        comuna: "No se",
+        tlf:  "9 2323 4444",
+        email: undefined,
+        showDetails: false,
+      }
+    ]);
     this.subscription = this.http.get<{ branches: IZones}>('../assets/branches/braches.json')
       .subscribe((val: { branches: IZones} )=> this.branchesData.next(val.branches))
   }
