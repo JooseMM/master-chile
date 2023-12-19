@@ -27,7 +27,7 @@ export class DataService implements OnDestroy {
         comuna: "No se",
         tlf:  "9 2323 4444",
         email: undefined,
-        showDetails: false,
+        showDetails: true,
       },
       {
         id: "Rancho Alto",

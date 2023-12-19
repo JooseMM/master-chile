@@ -10,11 +10,12 @@
   font-family: 'dm_sans';
   src: url('./assets/fonts/DM_Sans/DMSans-VariableFont_opsz,wght.ttf') format('truetype');
 }
-
+html {
+  background-color: "#332E2E";
+}
 body {
   font-family : 'dm_sans';
 }
-
 .archivo-font {
   font-family: 'archivo';
 }
@@ -32,7 +33,6 @@ body {
   width: 80px;
   right: -37px;
   top: 0rem;
-
 }
 .contact-container {
   position: relative;
@@ -48,7 +48,6 @@ body {
   width: 40px;
   right: -18px;
   top: 0rem;
-
 }
 .barbell-bg {
   background-image: url('./assets/barbell.svg');
@@ -109,7 +108,6 @@ body {
   left: 10vw;
 }
 
-
 @media only screen and (max-width: 1000px) {
   .barbell-bg {
     background-size: 80vw;
@@ -126,7 +124,7 @@ body {
   }
  }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 640px) {
   .cta-bg {
   background-size: contain;
    background-position: bottom -10vw right -15vw;
@@ -135,7 +133,6 @@ body {
     background-size: contain;
     left: 0;
   }
-
   .master-container:after {
     right: -48px;
   }
@@ -144,9 +141,3 @@ body {
     background-position: right -45vw bottom -30vw ;
   }
  }
-/*.barbell-bg {
-  background-image: url('./assets/barbell.svg');
-  background-repeat: no-repeat;
-  background-position: 75% 50%;
-}*/
-
