@@ -45,8 +45,23 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   height: 100%;
-  width: 40px;
-  right: -18px;
+  width: 60px;
+  right: -28px;
+  top: 0rem;
+}
+.contact-container-2 {
+  position: relative;
+}
+.contact-container-2:after {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  background-image: url('./assets/decorator-white.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 60px;
+  left: -25px;
   top: 0rem;
 }
 .barbell-bg {
