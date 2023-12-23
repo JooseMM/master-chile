@@ -64,13 +64,7 @@ body {
   left: -25px;
   top: 0rem;
 }
-.barbell-bg {
-  background-image: url('./assets/barbell.svg');
-  background-repeat: no-repeat;
-  background-size: 140vw;
-  background-position: right -45vw bottom -30vw ;
 
-}
 .dm-sans-font {
   font-family: 'DM_Sans';
 }
@@ -124,20 +118,19 @@ body {
   top: 0;
   left: 10vw;
 }
+.barbell-bg {
+  background-image: url('./assets/barbell.svg');
+  background-repeat: no-repeat;
+  background-size: 140vw;
+  background-position: right -45vw bottom -30vw ;
 
-@media only screen and (max-width: 640px) {
-  .cta-bg {
-  background-size: contain;
-   background-position: bottom -10vw right -15vw;
+}
+@media only screen and (min-width: 640px) and (max-width: 1030px) {
+ .barbell-bg {
+    background-size: 80vw;
+    background-position: right -8vw bottom -18vw ;
   }
-  .cta-bg:after {
-    background-size: contain;
-    left: 0;
-  }
-  .master-container:after {
-    right: -48px;
-  }
- }
+}
 @media only screen and (max-width: 1030px) {
   .cta-bg {
    background-size: 40vw;
@@ -148,10 +141,7 @@ body {
     background-size: 25vw;
     background-position: 0vw -2vw;
   }
-  .barbell-bg {
-    background-size: 80vw;
-    background-position: right -8vw bottom -18vw ;
-  }
+
 }
 @media only screen and (min-width: 1030px) {
   .barbell-bg {
@@ -171,5 +161,18 @@ body {
     background-position: top 7vw right 5vw;
   }
 }
+@media only screen and (max-width: 640px) {
+  .cta-bg {
+  background-size: contain;
+   background-position: bottom -10vw right -15vw;
+  }
+  .cta-bg:after {
+    background-size: contain;
+    left: 0;
+  }
+  .master-container:after {
+    right: -48px;
+  }
+ }
 
 
