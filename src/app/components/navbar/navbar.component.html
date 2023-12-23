@@ -6,17 +6,17 @@
     lg:static lg:flex lg:p-0 lg:items-center lg:translate-y-0 lg:flex-row  lg:shadow-none  lg:space-y-0 lg:space-x-16 "
     [ngClass]="showMobileMenu ? 'flex' : 'hidden'">
     <li>
-      <a class="lg:hover:text-lighter-black/100" routerLink="/inicio"
+      <a class="lg:hover:text-lighter-black/100" routerLink="/inicio" (click)="wrapper('')"
         routerLinkActive="text-lighter-black/100">INICIO</a>
     </li>
     <li>
-      <a class="lg:hover:text-lighter-black/100" (click)="scrollTo('branches')">SUCURSALES</a>
+      <a class="lg:hover:text-lighter-black/100" (click)="wrapper('branches')">SUCURSALES</a>
     </li>
     <li>
-      <a class="lg:hover:text-lighter-black/100" (click)="scrollTo('about')">NOSOTROS</a>
+      <a class="lg:hover:text-lighter-black/100" (click)="wrapper('about')">NOSOTROS</a>
     </li>
     <li>
-      <a class="lg:hover:text-lighter-black/100" routerLink="/contacto"
+      <a class="lg:hover:text-lighter-black/100" routerLink="/contacto" (click)="wrapper('')"
         routerLinkActive="text-lighter-black/100">CONTACTO</a>
     </li>
   </ul>
