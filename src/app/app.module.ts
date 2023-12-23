@@ -4,7 +4,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { InicioComponent } from './components/pages/inicio/inicio.component';
-import { NosotrosComponent } from './components/pages/nosotros/nosotros.component';
 import { ContactoComponent } from './components/pages/contacto/contacto.component';
 import { FooterComponent } from './components/footer/footer.component';
 import {FormsModule} from "@angular/forms"
@@ -22,7 +21,6 @@ import { SelectedZoneComponent } from './components/pages/inicio/selected-zone/s
     AppComponent,
     NavbarComponent,
     InicioComponent,
-    NosotrosComponent,
     ContactoComponent,
     FooterComponent,
     ConvertToReadablePipe,
