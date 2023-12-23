@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {Router, NavigationEnd} from '@angular/router'
+import {Router, NavigationEnd} from '@angular/router';
+import { DataService } from "../../data.service";
 
 @Component({
   selector: 'app-navbar',
@@ -8,11 +9,14 @@ import {Router, NavigationEnd} from '@angular/router'
 })
 export class NavbarComponent {
   showMobileMenu: boolean;
-  constructor() {
+  constructor(private router: Router, private service: DataService) {
     this.showMobileMenu = false;
   }
   toggleMobileMenu():void {
     this.showMobileMenu = !this.showMobileMenu;
+  }
+  scrollTo(value: string){
+    this.service.updateIdToScroll(value);
   }
 
 }

@@ -1,9 +1,9 @@
 <section *ngIf="showBranches.length != 0" class="bg-strong-black  ">
   <ul
-    class="px-2 grid grid-cols-1 gap-y-10 pb-32 | md:gap-y-16 md:px-10 | lg:justify-items-center lg:w-[1000px] lg:m-auto lg:grid-cols-2  ">
+    class="px-2 grid grid-cols-1 gap-y-10 pb-32 | md:gap-y-16 md:px-10 | lg:justify-items-center lg:w-[1000px] lg:m-auto lg:grid-cols-2 ">
     <li *ngFor="let branch of showBranches; let id = index" #id>
       <div
-        class="mx-auto max-w-[450px] relative z-10 rounded-md flex cursor-pointer h-44 flex-col justify-center items-center border-solid border-2 border-dimmed-white | md:h-[12rem] | lg:mx-0 lg:w-96"
+        class="mx-auto max-w-[450px] relative z-10 rounded-md flex cursor-pointer h-44 flex-col justify-center items-center border-solid border-2 border-dimmed-white | sm:h-[12rem] | lg:mx-0 lg:w-96"
         [ngClass]="id % 2 === 0 ? 'branch-bg-1':'branch-bg-2'" (click)="toggleDetail(id)">
         <h4 *ngIf="!branch.showDetails ; else elseDiv"
           class="text-dimmed-white archivo-font text-xl font-black tracking-widest uppercase | lg:text-2xl">
@@ -15,27 +15,31 @@
             [ngClass]="branch.showDetails ? 'pt-8 pb-8' : 'justify-center' ">
             <h5 class="archivo-font m-0 font-medium text-2xl leading-5 text-dimmed-white">{{branch.id}}</h5>
             <span class="text-dimmed-white/75 my-1 text-lg ">{{branch.ciudad}}</span>
-            <div class="hidden | sm:flex self-end  mt-4 justify-end items-center">
+            <div *ngIf="branch.tlf != null || branch.email != null"
+              class="hidden | sm:flex self-end  mt-4 justify-end items-center">
               <a class="contact-container text-dimmed-white leading-none rounded bg-bright-red mr-8 w-full pl-5 pr-3 py-3 whitespace-nowrap font-medium "
-                [class]="branch.tlf ? 'text-3xl pr-1 ml-2' : ' text-xl mx-2'"
+                [class]="branch.tlf ? 'text-3xl pr-1 ml-2' : ' text-xl py-4 mx-2 '"
                 [href]="branch.tlf ? 'telf:' + branch.tlf : 'mailto:' + branch.email">{{branch.tlf ? branch.tlf :
                 branch.email}}</a>
-              <span class="pr-3 ml-1.5 rounded py-2.5 bg-dimmed-white contact-container-2"><img
+              <span *ngIf="branch.tlf" class="pr-3 ml-1.5 rounded py-2.5 bg-dimmed-white contact-container-2"><img
                   src="../../../../../assets/icons/desktop-phone-icon.svg" alt="" class="w-11" /></span>
             </div>
             <!--SM:buttons-->
-            <div class="flex justify-end w-full mt-4 | sm:hidden">
+            <div *ngIf="branch.tlf != null || branch.email != null" class="flex justify-end w-full mt-4 | sm:hidden">
               <button
                 class="rounded pr-5 pl-3.5 py-2 bg-bright-red text-dimmed-white flex justify-center items-center archivo-font font-black">
                 <img class="mr-1" src="../../../../../assets/icons/phone-icon.svg" alt="">
                 TELEFONO
               </button>
               <button
-                class="ml-4 rounded px-5 py-2 bg-dimmed-white text-lighter-black flex justify-center items-center archivo-font font-black">
+                class="ml-4 rounded px-5 py-2 bg-dimmed-white text-lighter-black flex justify-center items-center archivo-font font-black ">
                 <img class="mr-1" src="../../../../../assets/icons/email-icon.svg" alt="">
                 EMAIL
               </button>
             </div>
+            <span *ngIf="branch.tlf == null && branch.email == null"
+              class="mt-2 contact-container text-xl max-w-[180px] text-dimmed-white leading-none rounded bg-bright-red mr-8 w-full pl-5 pr-3 py-4 whitespace-nowrap font-medium | md:max-w-[200px] md:text-2xl md:py-3 md:mt-3">
+              Proximamente</span>
           </div>
         </ng-template>
       </div>

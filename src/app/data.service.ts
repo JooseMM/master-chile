@@ -8,42 +8,28 @@ import { IBranches, IZones} from "./branches"
 })
 
 export class DataService implements OnDestroy {
-
+  private idToScroll: BehaviorSubject<string>;
   private branchesData: BehaviorSubject<IZones>;
   private selectedBranch: BehaviorSubject<IBranches[]>;
   private subscription : Subscription;
-
   constructor(private http: HttpClient ){
     this.branchesData = new BehaviorSubject<IZones>({
       zonaCentral: [],
       zonaNorte: [],
       zonaSur: []
     });
-    this.selectedBranch = new BehaviorSubject<IBranches[]>([
-      {
-        id: "Rancho Alto",
-        region: "Venecolandia",
-        ciudad: "Zulia",
-        comuna: "No se",
-        tlf:  "9 2323 4444",
-        email: undefined,
-        showDetails: true,
-      },
-      {
-        id: "Rancho Alto",
-        region: "Venecolandia",
-        ciudad: "Zulia",
-        comuna: "No se",
-        tlf:  "9 2323 4444",
-        email: undefined,
-        showDetails: false,
-      }
-    ]);
+    this.selectedBranch = new BehaviorSubject<IBranches[]>([]);
     this.subscription = this.http.get<{ branches: IZones}>('../assets/branches/braches.json')
       .subscribe((val: { branches: IZones} )=> this.branchesData.next(val.branches))
+    this.idToScroll = new BehaviorSubject<any>('');
   }
 
-
+  getIdToScroll() {
+    return this.idToScroll.asObservable();
+  }
+  updateIdToScroll(newValue: string) {
+    this.idToScroll.next(newValue);
+  }
   getData():Observable<IZones> {
     return this.branchesData.asObservable();
   }

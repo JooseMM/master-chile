@@ -11,7 +11,7 @@
   src: url('./assets/fonts/DM_Sans/DMSans-VariableFont_opsz,wght.ttf') format('truetype');
 }
 html {
-  background-color: #332E2E;
+  background-color: "#332E2E";
 }
 body {
   font-family : 'dm_sans';
@@ -64,12 +64,10 @@ body {
   left: -25px;
   top: 0rem;
 }
-.barbell-bg {
+.baell-bg {
   background-image: url('./assets/barbell.svg');
   background-repeat: no-repeat;
-  background-size: 140vw;
-  background-position: right -45vw bottom -30vw ;
-
+  background-position: 75% 50%;
 }
 .dm-sans-font {
   font-family: 'DM_Sans';
@@ -125,20 +123,7 @@ body {
   left: 10vw;
 }
 
-@media only screen and (max-width: 640px) {
-  .cta-bg {
-  background-size: contain;
-   background-position: bottom -10vw right -15vw;
-  }
-  .cta-bg:after {
-    background-size: contain;
-    left: 0;
-  }
-  .master-container:after {
-    right: -48px;
-  }
- }
-@media only screen and (max-width: 1030px) {
+@media only screen and (max-width: 1000px) {
   .cta-bg {
    background-size: 40vw;
    background-position: bottom -6vw right 0vw;
@@ -152,24 +137,22 @@ body {
     background-size: 80vw;
     background-position: right -8vw bottom -18vw ;
   }
-}
-@media only screen and (min-width: 1030px) {
-  .barbell-bg {
-    background-size: 50vw;
-    background-position: top 14vw right -0vw;
-  }
-}
-@media only screen and (min-width: 1280px) {
-  .barbell-bg {
-    background-size: 50vw;
-    background-position: top 10vw right 5vw;
-  }
-}
-@media only screen and (min-width: 1600px) {
-  .barbell-bg {
-    background-size: 50vw;
-    background-position: top 7vw right 5vw;
-  }
-}
+ }
 
-
+@media only screen and (max-width: 640px) {
+  .cta-bg {
+  background-size: contain;
+   background-position: bottom -10vw right -15vw;
+  }
+  .cta-bg:after {
+    background-size: contain;
+    left: 0;
+  }
+  .master-container:after {
+    right: -48px;
+  }
+  .barbell-bg {
+    background-size: 140vw;
+    background-position: right -45vw bottom -30vw ;
+  }
+ }

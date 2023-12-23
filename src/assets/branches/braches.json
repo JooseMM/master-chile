@@ -18,7 +18,7 @@
         "email": null
       },
       {
-        "id": "Asoc. Deportiva Regional Focus",
+        "id": "Asoc. Dep. Regional Focus",
         "region": "Metropolitana",
         "ciudad" : "Santiago",
         "comuna": "Proximamente",
@@ -39,7 +39,7 @@
         "ciudad": "Viña del Mar",
         "comuna": "Proximamente",
         "tlf": null,
-        "email": "Proximamente"
+        "email": null
       },
       {
         "id": "Asoc. Halteros",
@@ -47,7 +47,7 @@
         "ciudad": "Santiago",
         "comuna": "Estacion Central",
         "tlf": null,
-        "email": "Proximamente"
+        "email": null
       }
     ],
     "zonaNorte": [
@@ -62,7 +62,7 @@
     ],
     "zonaSur": [
       {
-        "id": "Club Deportivo Social de Pesas",
+        "id": "C.D. Social de Pesas",
         "region": "Los Lagos",
         "ciudad": "Proximamente",
         "comuna": "Proximamente",

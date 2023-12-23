@@ -24,7 +24,7 @@ showBranches: Array<IBranches>;
     this.showBranches = []
     this.dataSubcription = new Subscription();
   }
-  toggleDetail(id: number ) {
+  toggleDetail(id: number ):void {
     this.service.toggleDetails(id);
   }
   ngOnDestroy():void {
