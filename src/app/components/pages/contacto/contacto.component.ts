@@ -8,7 +8,6 @@ import {Router, NavigationEnd} from '@angular/router';
 })
 export class ContactoComponent {
   constructor(private router: Router) {
-
   }
   navigateHome():void {
     this.router.navigate(['/inicio']);
