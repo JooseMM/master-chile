@@ -17,6 +17,7 @@ export class NavbarComponent {
   }
   scrollTo(value: string){
     this.service.updateIdToScroll(value);
+    this.toggleMobileMenu();
   }
 
 }

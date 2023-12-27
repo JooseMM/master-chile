@@ -130,6 +130,9 @@ body {
     background-size: 80vw;
     background-position: right -8vw bottom -18vw ;
   }
+  .master-container:after {
+    right: -45px;
+  }
 }
 @media only screen and (max-width: 1030px) {
   .cta-bg {
@@ -171,7 +174,7 @@ body {
     left: 0;
   }
   .master-container:after {
-    right: -48px;
+    right: -45px;
   }
  }
 
